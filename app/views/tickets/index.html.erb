@@ -6,12 +6,12 @@
   <p>There are no tickets to display yet </p>
 <% else %>
   <% @tickets.each do |ticket| %>
-    <h2><%= ticket.id %></h2>
+    <h2>Ticket <%= ticket.id %></h2>
     <h3>Description</h3>
     <p><%= ticket.description %></p>
     <% unless ticket.response.nil? %>
       <h3>Response</h3>
-      <p>@ticket.response</p>
+      <p><%= @ticket.response %></p>
     <% end %>
   <% end %>
 <% end %>
