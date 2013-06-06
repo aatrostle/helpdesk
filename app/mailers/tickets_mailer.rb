@@ -9,6 +9,6 @@ class TicketsMailer < ActionMailer::Base
   def new_ticket(ticket)
     @greeting = "Hi"
 
-    mail to: "7e5e78bf4082256510e1@cloudmailin.net"
+    mail to: "sean.t.irby@gmail.com"
   end
 end
