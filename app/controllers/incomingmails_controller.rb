@@ -1,0 +1,3 @@
+class IncomingmailsController < ApplicationController
+
+end
