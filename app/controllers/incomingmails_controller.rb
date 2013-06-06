@@ -3,16 +3,16 @@ class IncomingmailsController < ApplicationController
 
   def update
     #Search
-    body = params[:message][:body]
+    message = Mail.new(params[:message])
 
     #yank out body from message
-    ticket_id = message.lines[0].chomp
+    ticket_id = message.body.lines[0].chomp
     #yank out ticket id from message_
 
 
     ticket = Ticket.find_by_id(ticket_id)
     if ticket
-      ticket.update_attribute(response, body)
+      ticket.update_attribute(response, message.body)
       render :text => 'success', :status => 200
     end
   end
