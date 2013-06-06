@@ -12,7 +12,7 @@ class IncomingmailsController < ApplicationController
 
 
     #yank out ticket id from message_
-    ticket_id = body.lines[0].chomp
+    ticket_id = body.lines.first.chomp
     ticket = Ticket.find_by_id(ticket_id)
 
     if ticket
