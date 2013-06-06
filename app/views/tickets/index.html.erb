@@ -1,0 +1,17 @@
+<h1>Tickets</h1>
+
+<%= link_to "New Ticket", new_ticket_path %>
+
+<% if @tickets.empty? %>
+  <p>There are no tickets to display yet </p>
+<% else %>
+  <% @tickets.each do |ticket| %>
+    <h2><%= ticket.id %></h2>
+    <h3>Description</h3>
+    <p><%= ticket.description %></p>
+    <% unless ticket.response.nil? %>
+      <h3>Response</h3>
+      <p>ticket.response</p>
+    <% end %>
+  <% end %>
+<% end %>

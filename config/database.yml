@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  database: swan
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: swan
+  host: localhost
+
+# production:
+#   adapter: postgresql
+#   database: db/production.sqlite3
+#   pool: 5
+#   timeout: 5000
