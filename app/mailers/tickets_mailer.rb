@@ -7,7 +7,7 @@ class TicketsMailer < ActionMailer::Base
   #   en.tickets_mailer.new_ticket.subject
   #
   def new_ticket(ticket)
-    @greeting = "Hi"
+    @ticket = ticket
 
     mail to: "sean.t.irby@gmail.com"
   end
