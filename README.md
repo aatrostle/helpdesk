@@ -1,4 +1,4 @@
-![Alt Text](path/to/resource.png)
+![App Screenshot](/app/assets/images/app_screenshot.png)
 
 ## Helpdesk
 
