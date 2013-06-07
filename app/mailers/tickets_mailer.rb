@@ -9,6 +9,6 @@ class TicketsMailer < ActionMailer::Base
   def new_ticket(ticket)
     @ticket = ticket
 
-    mail to: "sean.t.irby@gmail.com"
+    mail to: ticket.email, subject: "Ticket <#{ticket.id}> Created!"
   end
 end
