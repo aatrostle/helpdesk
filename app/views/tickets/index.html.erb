@@ -7,6 +7,7 @@
 <% else %>
   <% @tickets.each do |ticket| %>
     <h2>Ticket <%= ticket.id %></h2>
+    <p>Created by: <%= ticket.email %></p>
     <h3>Description</h3>
     <p><%= ticket.description %></p>
     <% unless ticket.response.nil? %>
