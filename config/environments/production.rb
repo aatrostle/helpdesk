@@ -66,13 +66,12 @@ Helpdesk::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
 
-  config.action_mailer.default_url_options = { :host => 'whispering-sierra-1957.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'seanirby-helpdesk.herokuapp.com' }
   ActionMailer::Base.smtp_settings = {
   :address        => "smtp.sendgrid.net",
   :port           => "25",
   :authentication => :plain,
   :user_name      => ENV['SENDGRID_USERNAME'],
-  :password       => ENV['SENDGRID_PASSWORD'],
-  :domain         => ENV['SENDGRID_DOMAIN']
+  :password       => ENV['SENDGRID_PASSWORD']
   }
 end
